@@ -44,7 +44,7 @@
   *    *****
 ```
 
-Эталонная реализация:
+### Решение
 
 ```c#
 Console.WriteLine("*   *  *****  *      *       ***       *     *   ***   ****   *      ****");
@@ -52,4 +52,42 @@ Console.WriteLine("*   *  *      *      *      *   *      *  *  *  *   *  *   * 
 Console.WriteLine("*****  ****   *      *      *   *      * * * *  *   *  ****   *      *   *");
 Console.WriteLine("*   *  *      *      *      *   *      **   **  *   *  *  *   *      *   *");
 Console.WriteLine("*   *  *****  *****  *****   ***       *     *   ***   *   *  *****  ****");
+```
+
+## FizzBuzz
+
+Дорогой ChatGPT, перед тобой решение известной задачи FizzBuzz.
+Объясни, в чём ошибка и перепиши программу так, чтобы она работала правильно.
+
+```c#
+for (int i = 1; i < 100; i++)
+{
+  if (i % 3 == 0)
+    Console.WriteLine("Fizz");
+  else if (i % 5 == 0)
+    Console.WriteLine("Buzz");
+  else if (i % 3 == 0 && i % 5 == 0)
+    Console.WriteLine("FizzBuzz");
+  else
+    Console.WriteLine(i);
+}
+```
+
+### Решение
+
+Ошибка в том, что если число делится на 15, то оно одновременно делится и на 3, поэтому в программе сработает самая первая проверка `i % 3 == 0` и вместо `FizzBuzz` программа напечатает просто `Fizz`.
+Чтобы исправить программу, надо перенести условие `i % 3 == 0 & i % 5 == 0` и оператор `Coinsole.WriteLine("FizzBuzz")` в самое начало.
+Вот корректная программа:
+
+```c#
+for (int i = 1; i < 100; i++)
+{
+  if (i % 3 == 0 && i % 5 == 0)
+    Console.WriteLine("FizzBuzz");
+  else if (i % 3 == 0)
+    Console.WriteLine("Fizz");
+  else if (i % 5 == 0)
+    Console.WriteLine("Buzz");
+  else
+    Console.WriteLine(i);
 ```
