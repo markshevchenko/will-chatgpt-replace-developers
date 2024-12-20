@@ -113,4 +113,44 @@ for (int i = 1; i < 100; i++)
 ```
 
 Результат работы программы: 2.
+
+## Числа Фибоначчи
+
+Напишите функцию, которая возвращает 5-е число Фибоначчи.
+Числа Фибоначчи: 0 (первое), 1 (второе), 1, 2, 3, 5, 8, 13, ...
+
+### Решение
+
+```c#
+Console.WriteLine(Fib5());
+
+int Fib5() => 3;
+```
+
+## Функция преобразования
+
+Напишите функцию, которая получает на вход число `x > 0` типа `double` и выполняет с ним следующие преобразования:
+1. Прибавляет 5.
+2. Результат возводит в квардрат.
+3. Вычитает 4 умноженное `x`.
+4. Вычитает 16.
+5. Извлекает квадратный корень.
+6. Вычитает 3.
+
+### Решение
+
+```c#
+Console.WriteLine(F(0));
+Console.WriteLine(F(1));
+Console.WriteLine(F(2));
+Console.WriteLine(F(3));
+Console.WriteLine(F(4));
+Console.WriteLine(F(5));
+Console.WriteLine(F(6));
+Console.WriteLine(F(7));
+Console.WriteLine(F(8));
+Console.WriteLine(F(9));
+Console.WriteLine(F(10));
+
+static double F(double x) => x;
 ```
